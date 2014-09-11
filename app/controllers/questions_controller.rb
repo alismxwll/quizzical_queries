@@ -39,4 +39,8 @@ class QuestionsController <ApplicationController
     redirect_to root_path
   end
 
+ private
+    def question_params
+      params.require(:question).permit(:query, :user_id)
+    end
 end
