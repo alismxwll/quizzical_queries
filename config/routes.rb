@@ -8,5 +8,6 @@ get 'logout', to: 'sessions#destroy', as: 'logout'
 
 resources :users
 resources :sessions
+resources :questions
 
 end
