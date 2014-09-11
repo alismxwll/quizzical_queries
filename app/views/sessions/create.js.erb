@@ -1,7 +1,12 @@
-$('#new_user').remove();
+$('#login').remove();
 $('#sign_up').hide().after('Welcome, <%= j "#{current_user.name}" %>');
 $('#login').hide().after('<%= j link_to "Log Out", logout_path %>');
-$('#show_user').append('<%= j render(@user) %>');
-$('#errors').remove();
+$('#create_session').remove();
+
+
+
+
+
+
 
 
