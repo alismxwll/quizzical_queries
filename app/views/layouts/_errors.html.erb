@@ -1,0 +1,8 @@
+<% if object.errors.any? id: 'errors' remote: true%>
+  <ul>
+    <h4>We may have an issue...</h4>
+    <% object.errors.full_messages.each do |message| %>
+      <%= message %>
+    <% end %>
+  </ul>
+<% end %>

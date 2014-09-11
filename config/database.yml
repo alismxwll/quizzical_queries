@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+
+development:
+  <<: *default
+  database: ajax_project_development
+
+test:
+  <<: *default
+  database: ajax_project_test
+
+
+# production:
+#   <<: *default
+#   database: ajax_project_production
+#   username: ajax_project
+#   password: <%= ENV['AJAX_PROJECT_DATABASE_PASSWORD'] %>
