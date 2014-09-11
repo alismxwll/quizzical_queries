@@ -1,10 +1,6 @@
 $('#new_user').remove();
 $('#sign_up').hide().after('Welcome, <%= j "#{current_user.name}" %>');
-// $('#welcome').show();
 $('#show_user').append('<%= j render(@user) %>');
+$('#errors').remove();
 
 
-
-
-
-// $('#errors').show();

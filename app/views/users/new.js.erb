@@ -1,1 +1,5 @@
-$('#sign_up').hide().after('<%= j render "form" %>');
+<% unless @user.errors.any? %>
+  $('#sign_up').hide().after('<%= j render "form" %>');
+<% end %>
+$('#sign_up').hide().after('<%= j render "layouts/errors", :object => @user %>');
+// Render errors so that when the user incorrectly signs up, he knows why he failed
